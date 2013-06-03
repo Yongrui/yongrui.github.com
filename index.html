@@ -10,7 +10,8 @@ title: Codemyown
       <div class="first-post">
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <span>{{ post.date | date_to_string }}</span>
-        <p>{{ post.content }}</p>
+        <p>{{ post.description }}</p>
+        <a href="{{ post.url }}">阅读全文>></a>
       </div>
       <h2>最近文章</h2>
   	  <ul class="posts">
