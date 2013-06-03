@@ -9,7 +9,7 @@ CONFIG = {
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "md",
+  'post_ext' => "markdown",
   'theme_package_version' => "0.1.0"
 }
 
@@ -66,8 +66,9 @@ task :post do
     post.puts 'description: ""'
     post.puts "category: "
     post.puts "tags: []"
+    post.puts "comments: true"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+   # post.puts "{% include JB/setup %}"
   end
 end # task :post
 
@@ -92,7 +93,7 @@ task :page do
     post.puts "title: \"#{title}\""
     post.puts 'description: ""'
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+   # post.puts "{% include JB/setup %}"
   end
 end # task :page
 
