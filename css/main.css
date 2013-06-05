@@ -138,8 +138,8 @@ ul.posts span {
   margin-bottom: 2em;
 }
 
-.site .first-post ul, 
-.site .first-post ol {
+.site ul, 
+.site ol {
   margin-left: 1.35em;
 }
 
