@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "关于 repaint 和 reflow 一些介绍"
-description: "<h4 id='_repaint__reflow'>什么是 repaint 和 reflow？</h4><p>一个页面由两部分组成：</p>
+description: "<h3 id='_repaint__reflow'>什么是 repaint 和 reflow？</h3><p>一个页面由两部分组成：</p>
 <ul><li>DOM：描述该页面的结构</li><li>render：描述 DOM 节点 (nodes) 在页面上如何呈现</li></ul><p>当 DOM 元素的属性发生变化 (如 color) 时, 浏览器会通知 render 重新描绘相应的元素, 此过程称为 repaint。</p><p>repaint(重绘)是在一个元素的外观被改变，但没有改变布局的情况下发生，如改变visibility、outline、前景色。</p><p>如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。</p><p>reflow(回流)是导致DOM脚本执行低效的关键因素之一。页面上任何一个结点触发reflow，都会导致它的子结点及祖先结点重新渲染。</p>"
 category: 优化
 tags: [reflow, repaint, 前端优化]

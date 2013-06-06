@@ -3,29 +3,30 @@ layout: default
 title: Codemyown
 ---
 
-<div id="home"><!--
-  {% for post in site.posts %}
-    {% if forloop.first %}
-  	  <h2>最新文章</h2>
-      <div class="first-post">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <span>{{ post.date | date_to_string }}</span>
-        <p>{{ post.description }}</p>
-        <a href="{{ post.url }}">阅读全文>></a>
-      </div>
-      <h2>所有文章</h2>
-  	  <ul class="posts">
-    {% else %}
-      	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}
-  </ul>-->
-  {% for post in site.posts %}
+<div id="home">
+  {% for post in paginator.posts %}
     <div class="post">
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <span>{{ post.date | date_to_string }}</span>
-      <p>{{ post.description }}</p>
-      <a href="{{ post.url }}">阅读全文>></a>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="meta">{{ post.date | date_to_string }}</p>
+      <div class="description">{{ post.description }}</div>
+      <a class="readmore" href="{{ post.url }}">Read More</a>
     </div>
   {% endfor %}
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="previous">←Previous page</a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="previous">←Previous page</a>
+      {% endif %}
+    {% else %}
+      <span class="previous disabled">←Previous page</span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="next">Next page→</a>
+    {% else %}
+      <span class="next disabled">Next page→</span>
+    {% endif %}
+  </div>
 </div>

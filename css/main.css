@@ -25,9 +25,18 @@ body {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a { 
+  color: #a00;
+  text-decoration: none;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 
 table {
   font-size: inherit;
@@ -46,24 +55,43 @@ pre code {
   font-size: 14px;
 }
 
+::selection {
+  background: #a00;
+  color: #fff;
+}
+
 /*****************************************************************************/
 /*
 /* Home
 /*
 /*****************************************************************************/
-ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+
+.readmore {
+  text-transform: uppercase;
 }
 
-ul.posts li {
-  line-height: 1.75em;
+.pagination {
+  overflow: hidden;
 }
 
-ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
+
+.disabled {
+  color: #ccc;
+}
+
+.post h2 a {
+  color: #666;
+}
+
+.post h2 a:hover {
+  color: #000;
 }
 
 /*****************************************************************************/
@@ -144,10 +172,6 @@ ul.posts span {
 
 .site h2 {
   margin-bottom: 1em;
-}
-
-.site .first-post {
-  margin-bottom: 2em;
 }
 
 .site ul, 
