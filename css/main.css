@@ -35,12 +35,15 @@ table {
 }
 
 pre {
-  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-  font-size: 14px;
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0.4em;
   overflow: auto;
+}
+
+pre code {
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-size: 14px;
 }
 
 /*****************************************************************************/
