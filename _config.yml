@@ -1,4 +1,4 @@
 name: Codemyown
 pygments: true
 permalink: /blog/:year/:month/:day/:title
-paginate: 2
+paginate: 10
