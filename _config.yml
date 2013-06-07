@@ -5,3 +5,4 @@ paginate: 10
 
 categories_path: /categories.html
 tags_path: /tags.html
+archives_path: /archives.html

@@ -108,13 +108,27 @@ pre code {
 .site {
   font-size: 115%;
   text-align: justify;
-  max-width: 46em;
+  max-width: 980px;
   margin: 3em auto 2em;
-  padding: 3em 3em 1.5em;
+  padding: 3em 2em 1.5em;
   line-height: 1.5em;
   -webkit-box-shadow: 0px 0px 8px #aaa;
   -moz-box-shadow: 0px 0px 8px #aaa;
   box-shadow: 0px 0px 8px #aaa;
+}
+
+.site .main {
+  overflow: hidden;
+}
+
+.site .content {
+  float: left;
+  width: 68%;
+}
+
+.site .sidebar {
+  float: right;
+  width: 25%;
 }
 
 .site .header a {
@@ -149,30 +163,12 @@ pre code {
 }
 
 .site .footer {
-  font-size: 80%;
+  clear: both;
   color: #666;
   border-top: 4px solid #eee;
+  font-size: 80%;
   margin-top: 2em;
   overflow: hidden;
-}
-
-.site .footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.site .footer .contact a {
-  color: #8085C1;
-}
-
-.site .footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.site .footer .rss img {
-  border: 0;
 }
 
 .site h2 {
@@ -240,6 +236,15 @@ pre code {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF;
+}
+
+/* sidebar */
+.sidebar .category, .sidebar .archive, .sidebar .tag {
+  margin-bottom: 1.75em;
+}
+
+.sidebar ul.tag_box {
+  margin-left: 0;
 }
 
 /*****************************************************************************/

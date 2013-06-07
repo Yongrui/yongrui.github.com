@@ -21,21 +21,39 @@
               <h1 class="title"><a href="/">{{ site.name }}</a></h1>
               <a class="extra" href="/">home</a>
             </div>
-     
+            <div class="main">
+              <div class="content">
                 {{ content }}
-
+              </div>
+              <div class="sidebar">
+                <div class="category">
+                  <h2>分类</h2>
+                  <ul class="tag_box">
+                    {% assign categories_list = site.categories %}
+                    {% include categories.md %}
+                  </ul>
+                </div>
+                <div class="archive">
+                  <h2>归档</h2>
+                  <ul class="tag_box">
+                    {% for post in site.posts %}
+                      <li><a href="{{ BASE_PATH }}{{ site.archives_path }}">{{ post.date | date_to_string }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="tag">
+                  <h2>标记</h2>
+                  <ul class="tag_box inline">
+                    {% assign tags_list = site.tags %}
+                    {% include tags.md %}
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="footer">
               <div class="contact">
                 <p>
-                  Liang Yongrui<br />
-                  Web Developer<br />
-                  liangyongrui@gmail.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/Yongrui/">github.com/Yongrui</a><br />
-                  <a href="http://weibo.com/liangyongrui/">webo.com/liangyongrui</a><br />
+                  Power by <a href="https://github.com/Yongrui/yongrui.github.com" target="_blank">Yongrui</a>
                 </p>
               </div>
             </div>
