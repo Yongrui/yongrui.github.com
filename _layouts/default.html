@@ -27,14 +27,14 @@
               </div>
               <div class="sidebar">
                 <div class="category">
-                  <h2>分类</h2>
+                  <h2>Cagories</h2>
                   <ul class="tag_box">
                     {% assign categories_list = site.categories %}
                     {% include categories.md %}
                   </ul>
                 </div>
                 <div class="archive">
-                  <h2>归档</h2>
+                  <h2>Archives</h2>
                   <ul class="tag_box">
                     {% for post in site.posts %}
                       <li><a href="{{ BASE_PATH }}{{ site.archives_path }}">{{ post.date | date_to_string }}</a></li>
@@ -42,7 +42,7 @@
                   </ul>
                 </div>
                 <div class="tag">
-                  <h2>标记</h2>
+                  <h2>Tags</h2>
                   <ul class="tag_box inline">
                     {% assign tags_list = site.tags %}
                     {% include tags.md %}
