@@ -9,6 +9,22 @@ title: Codemyown
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p class="meta">{{ post.date | date_to_string }}</p>
       <div class="description">{{ post.description }}</div>
+      <div class="tag-boxes">
+      {% unless post.categories == empty %}
+        <ul class="tag_box inline">
+          <li><i class="icon icon-folder-open"></i></li>
+          {% assign categories_list = post.categories %}
+          {% include categories.md %}
+        </ul>
+      {% endunless %}
+      {% unless post.tags == empty %}
+        <ul class="tag_box inline">
+          <li><i class="icon icon-tags"></i></li>
+          {% assign tags_list = post.tags %}
+          {% include tags.md %}
+        </ul>
+      {% endunless %}
+    </div>
       <a class="readmore" href="{{ post.url }}">Read More</a>
     </div>
   {% endfor %}

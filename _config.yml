@@ -2,3 +2,6 @@ name: Codemyown
 pygments: true
 permalink: /blog/:year/:month/:day/:title
 paginate: 10
+
+categories_path: /categories.html
+tags_path: /tags.html

@@ -2,8 +2,8 @@
 layout: post
 title: "HTML5 Fullscreen Api"
 description: "<p>HTML5给我们提供了全屏化的方法：Fullscreen API，其实就是一组简单的Javascript API。Fullscreen API给开发者提供了一种可编程化的方法将全屏种取消全屏的选择提供给用户，这在web应用和web游戏中是非常有用的。主要的API如下：</p>"
-category: HTML5
-tags: [HTML5, Javascript, FullscreenAPI]
+category: html5
+tags: [html5, javascript, fullscreen api]
 comments: true
 ---
 
@@ -96,7 +96,7 @@ element.addEventListener("fullscreenchange", function(e) {
 {% highlight css %}
 /* html */
 :-webkit-full-screen {
-     background: pink;
+    background: pink;
 }
 :-moz-full-screen {
     background: pink;
