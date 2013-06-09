@@ -111,16 +111,23 @@ pre code {
 .site {
   font-size: 115%;
   text-align: justify;
-  max-width: 980px;
-  margin: 3em auto 2em;
-  padding: 3em 2em 1.5em;
+  max-width: 960px;
+  margin: 3% auto 2%;
+  padding: 3% 2.5% 1.5%;
   line-height: 1.5em;
-  -webkit-box-shadow: 0px 0px 8px #aaa;
-  -moz-box-shadow: 0px 0px 8px #aaa;
-  box-shadow: 0px 0px 8px #aaa;
+  -webkit-box-shadow: 2px 2px 8px #aaa;
+  -moz-box-shadow: 2px 2px 8px #aaa;
+  box-shadow: 2px 2px 8px #aaa;
+}
+
+.site .header {
+  border-bottom: 4px solid #eee;
+  margin-bottom: 2px;
 }
 
 .site .main {
+  border-top: 2px solid #eee;
+  padding-top: 4em;
   overflow: hidden;
 }
 
@@ -141,11 +148,14 @@ pre code {
 
 .site .header h1.title {
   display: inline-block;
-  margin-bottom: 2em;
+  font-size: 3.5em;
+  margin-bottom: 0;
 }
 
 .site .header h1.title a {
   color: #a00;
+  display: block;
+  margin-bottom: .6em;
 }
 
 .site .header h1.title a:hover {
@@ -333,12 +343,29 @@ pre code {
 /*
 /*****************************************************************************/
 
-@media (max-width: 780px) {
+@media (max-width: 1020px) {
   .site {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    padding: 0 6.5% 3.25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site .content {
+    width: 100%;
+  }
+
+  .site .sidebar {
+    width: 0;
+  }
+
+  .site .header h1.title {
+    font-size: 2.5em;
+  }
+
+  .site .header a.extra {
+    display: none;
   }
 }
 
