@@ -71,4 +71,4 @@ reflow 和 repaint 都是需要计算的，会消耗资源，影响用户体验�
 
 
 
-***本文来自 [http://www.zhoonchen.com/](http://www.zhoonchen.com/blog/2011/05/%E5%85%B3%E4%BA%8Erepaint%E5%92%8Creflow%E4%B8%80%E4%BA%9B%E4%BB%8B%E7%BB%8D/)***
+#### 本文来自 [http://www.zhoonchen.com/](http://www.zhoonchen.com/blog/2011/05/%E5%85%B3%E4%BA%8Erepaint%E5%92%8Creflow%E4%B8%80%E4%BA%9B%E4%BB%8B%E7%BB%8D/)

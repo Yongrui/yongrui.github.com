@@ -29,8 +29,10 @@ img.src = "http://www.example.com/test?name=Nicholas";
 
 图像Ping最常用于跟踪用户点击页面或动态广告曝光次数。它有两个主要的缺点：
 
--   只能发送GET请求。
--   无法访问服务器的响应文本。
+<ul>
+<li>只能发送GET请求。</li>
+<li>无法访问服务器的响应文本。</li>
+</ul>
 
 所以，图像Ping只能用于浏览器与服务器间的简单通信。
 
@@ -38,8 +40,10 @@ img.src = "http://www.example.com/test?name=Nicholas";
 
 JSONP由两部分组成：
 
--   回调函数：当响应来到时在页面中调用的函数。
--   数据：传入回调函数中的JSON数据。
+<ul>
+<li>回调函数：当响应来到时在页面中调用的函数。</li>
+<li>数据：传入回调函数中的JSON数据。</li>
+</ul>
 
 JSONP是通过动态`<script>`元素，然后为src属性指定一个跨域URL来实现的。看下面的例子：
 
@@ -57,11 +61,17 @@ document.body.insertBefore(script, document.body.firstChild);
 
 JSONP与图像Ping相比，它的优点有：
 
--   能够直接访问响应文本。
--   支持在浏览器与服务器之间双向通信。
+<ul>
+<li>能够直接访问响应文本。</li>
+<li>支持在浏览器与服务器之间双向通信。</li>
+</ul>
 
 不过，JSONP也有亮点不足：
 
--   JSONP时从其他域中加载代码执行，不能确定在响应中是否有恶意代码。
--   很难确定JSONP请求是否失败。
-<p></p>
+<ul>
+<li>JSONP时从其他域中加载代码执行，不能确定在响应中是否有恶意代码。</li>
+<li>很难确定JSONP请求是否失败。</li>
+</ul>
+
+***以上知识参考自[《JavaScript高级程序设计（第3版）》](http://www.wrox.com/WileyCDA/WroxTitle/Professional-JavaScript-for-Web-Developers-3rd-Edition.productCd-1118222199.html)***
+
