@@ -1,0 +1,67 @@
+---
+layout: post
+title: "跨域技术（二）"
+category: javascript
+tags: [图像Ping, JSONP, javascript, 跨域]
+comments: true
+description: "<p>除了使用CORS实现跨域通信之外，我们还可以利用DOM中能够执行跨域请求的功能，在不依赖XHR对象的情况下发送某种请求，这些技术叫做图像Ping和JSONP。</p>
+<h3 id='ping'>图像Ping</h3>
+<p>我们知道，一个网页可以从任何网页中加载图像，不用担心跨不跨域，但是我却从来都不知道这居然也是一种跨域请求技术。图像Ping是与服务器进行简单、单向的跨域通信的一种方式。</p>"
+---
+
+除了使用CORS实现跨域通信之外，我们还可以利用DOM中能够执行跨域请求的功能，在不依赖XHR对象的情况下发送某种请求，这些技术叫做图像Ping和JSONP。
+
+###图像Ping
+
+我们知道，一个网页可以从任何网页中加载图像，不用担心跨不跨域，但是我却从来都不知道这居然也是一种跨域请求技术。图像Ping是与服务器进行简单、单向的跨域通信的一种方式。
+
+在一个网页中，我们可以动态地创建图像，通过在src中以查询字符串的形式发送请求数据，使用它们的onload和onerror事件处理程序来确定是否接收到了响应，它的响应通常是像素图或204响应，但是浏览器得不到任何具体的数据，只能通过侦听load和error事件得知响应收到的时间。看下面的例子：
+
+{% highlight javascript %}
+var img = new Image();
+img.onload = img.onerror = function() {
+    alert("Done!");
+};
+img.src = "http://www.example.com/test?name=Nicholas";
+{% endhighlight %}
+
+这里创建了一个Image的实例，在请求中发送了一个name的参数，只要onload和onerror事件收到无论时什么响应，只要请求完成，我们就会知道。
+
+图像Ping最常用于跟踪用户点击页面或动态广告曝光次数。它有两个主要的缺点：
+
+-   只能发送GET请求。
+-   只能发送GET请求。
+
+所以，图像Ping只能用于浏览器与服务器间的简单通信。
+
+###JSONP
+
+JSONP由两部分组成：
+
+-   回调函数：当响应来到时在页面中调用的函数。
+-   数据：传入回调函数中的JSON数据。
+
+JSONP是通过动态`<script>`元素，然后为src属性指定一个跨域URL来实现的。看下面的例子：
+
+{% highlight javascript %}
+function handleResponse(response) {
+    alert("You are at IP address " + response.ip + ", which is in " + response.city + ", " + response.region_name);
+}
+
+var script = document.createElement("script");
+script.src = "http://freegeoip.net/json/?callback=handleResponse";
+document.body.insertBefore(script, document.body.firstChild);
+{% endhighlight %}
+
+这是一个通过查询地理定位服务来显示你的IP地址和位置信息的例子。
+
+JSONP与图像Ping相比，它的优点有：
+
+-   能够直接访问响应文本。
+-   支持在浏览器与服务器之间双向通信。
+
+不过，JSONP也有亮点不足：
+
+-   JSONP时从其他域中加载代码执行，不能确定在响应中是否有恶意代码。
+-   很难确定JSONP请求是否失败。
+<p></p>
