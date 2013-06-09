@@ -343,11 +343,17 @@ pre code {
 /*
 /*****************************************************************************/
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .site {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .site .tag-boxes ul:nth-child(2) {
+    display: none;
   }
 }
 
