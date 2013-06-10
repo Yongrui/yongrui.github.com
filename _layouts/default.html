@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="Codemyown是一个个人博客，主要记录个人在web前端上的技术和难题和笔记...">
         <meta name="author" content="Codemyown">
-        <meta name="keywords" content="Codemyown,html,CSS,javascript,web,前端，个人博客">
+        <meta name="keywords" content="Codemyown,html,CSS,javascript,web,前端,个人博客">
         <meta name="robots" content="index,follow">
         <meta name="application-name" content="codemyown.info">
 
@@ -25,7 +25,14 @@
             <div class="header">
               <h1 class="title"><a href="/">{{ site.name }}</a></h1>
               <a class="extra" href="/">home</a>
-            </div>
+            </div><!-- end header -->
+            <div class="nav">
+              <ul>
+                <li><a href="/categories.html">Categories</a></li>
+                <li><a href="/archives.html">Archives</a></li>
+                <li><a href="/tags.html">Tags</a></li>
+              </ul>
+            </div><!-- end nav -->
             <div class="main">
               <div class="content">
                 {{ content }}
@@ -52,16 +59,16 @@
                     {% include tags.md %}
                   </ul>
                 </div>
-              </div>
-            </div>
+              </div><!-- end sidebar -->
+            </div><!-- end main -->
             <div class="footer">
               <div class="contact">
                 <p>
                   <a href="https://github.com/Yongrui/yongrui.github.com" target="_blank">Yongrui</a>
                 </p>
               </div>
-            </div>
-          </div>
+            </div><!-- end footer -->
+          </div><!-- end site -->
         </div> <!-- /container -->
 
     </body>
