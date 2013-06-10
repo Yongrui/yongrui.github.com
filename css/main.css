@@ -44,6 +44,11 @@ table {
   font: 100%;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 pre {
   border: 1px solid #ddd;
   background-color: #eef;
