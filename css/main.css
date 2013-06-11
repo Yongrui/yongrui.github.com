@@ -19,7 +19,9 @@ body {
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
-  background-color: silver;/*
+  background: rgb(240, 240, 240);
+  /*background: silver url(../images/circles.png) repeat;*/
+  /*
   background-image: -webkit-radial-gradient(circle at 100% 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
                     -webkit-radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
                     -webkit-radial-gradient(circle at 50% 100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
@@ -171,7 +173,7 @@ pre code {
 
 .site .header h1.title {
   display: inline-block;
-  font-size: 3.5em;
+  font-size: 2.5em;
   margin-bottom: 0;
 }
 
@@ -195,8 +197,7 @@ pre code {
 }
 
 .site .nav {
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .site .nav ul {
@@ -405,30 +406,19 @@ pre code {
   }
 }
 
-@media (max-width: 720px) {
-  .site .tag-boxes ul:nth-child(2) {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .site .nav {
-    height: auto;
+    display: block;
   }
 
   .site .content {
+    float: none;
     width: 100%;
   }
 
-  .site .sidebar {
-    width: 0;
-  }
-
-  .site .header h1.title {
-    font-size: 2.5em;
-  }
-
-  .site .header a.extra {
+  .site .sidebar,
+  .site .header a.extra,
+  .post .tag-boxes ul:nth-child(2) {
     display: none;
   }
 }
