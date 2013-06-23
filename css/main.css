@@ -368,6 +368,10 @@ pre code {
     margin-left: 0;
     width: 100%;
   }
+
+  #disqus_thread {
+    margin: 60px 0 0 0;
+  }
 }
 
 @media (max-width: 546px) {
