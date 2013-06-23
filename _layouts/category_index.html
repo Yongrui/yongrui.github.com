@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h2 class="result-header">All the articles by "{{ page.category }}" category:</h2>
+{% for post in site.categories[page.category] %}
+	<div class="post">
+    	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    	<ul class="meta">
+    		<li class="date">
+        		{{ post.date | date_to_string }}</li>
+        		{% assign categories_list = post.categories %}
+        		{% include category.md %}
+    	    <li class="tag">
+        		<ul>
+        			{% assign tags_list = post.tags %}
+        			{% include tag.md %}
+        		</ul>
+    		</li>
+    	</ul>
+    	<div class="text">{{ post.content }}</div>
+    </div>
+{% endfor %}

@@ -3,6 +3,4 @@ pygments: true
 permalink: /blog/:year/:month/:day/:title
 paginate: 10
 
-categories_path: /categories.html
-tags_path: /tags.html
-archives_path: /archives.html
+archive_path: /archive.html

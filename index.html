@@ -3,46 +3,42 @@ layout: default
 title: Codemyown
 ---
 
-<div id="home">
   {% for post in paginator.posts %}
     <div class="post">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="meta">{{ post.date | date_to_string }}</p>
-      <div class="description">{{ post.description }}</div>
-      <div class="tag-boxes">
-      {% unless post.categories == empty %}
-        <ul class="tag_box inline">
-          <li><i class="icon icon-folder-open"></i></li>
+      <ul class="meta">
+        <li class="date">
+          {{ post.date | date_to_string }}</li>
           {% assign categories_list = post.categories %}
-          {% include categories.md %}
-        </ul>
-      {% endunless %}
-      {% unless post.tags == empty %}
-        <ul class="tag_box inline">
-          <li><i class="icon icon-tags"></i></li>
-          {% assign tags_list = post.tags %}
-          {% include tags.md %}
-        </ul>
-      {% endunless %}
-    </div>
-      <a class="readmore" href="{{ post.url }}">Read More</a>
+          {% include category.md %}
+        <li class="tag">
+          <ul>
+            {% assign tags_list = post.tags %}
+            {% include tag.md %}
+          </ul>
+        </li>
+      </ul>
+      <div class="text">{{ post.content }}</div>
     </div>
   {% endfor %}
 
   <div class="pagination">
+    <div class="previous">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <a href="/" class="previous">←Previous page</a>
+        <a href="/">←Previous page</a>
       {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="previous">←Previous page</a>
+        <a href="/page{{ paginator.previous_page }}">←Prev</a>
       {% endif %}
     {% else %}
-      <span class="previous disabled">←Previous page</span>
+      <span class="disabled">←Prev</span>
     {% endif %}
+    </div>
+    <div class="next">
     {% if paginator.next_page %}
-      <a href="/page{{ paginator.next_page }}" class="next">Next page→</a>
+      <a href="/page{{ paginator.next_page }}">Next→</a>
     {% else %}
-      <span class="next disabled">Next page→</span>
+      <span class="disabled">Next→</span>
     {% endif %}
+    </div>
   </div>
-</div>
