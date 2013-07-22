@@ -219,6 +219,7 @@ pre code {
         }
         .site .post .next-month {
           margin-bottom: 40px;
+          clear: both;
         }
           .site .post .next-month .text {
             border-left: 10px solid silver;
