@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 13.34px 'Microsoft YaHei', Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -106,7 +106,7 @@ pre code {
 .site {
   color: #666;
   font-size: 115%;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: justify;
   width: 100%;
 }
@@ -122,7 +122,7 @@ pre code {
       width: 90%;
     }
       .site h1 {
-        font: 60px/70px 'Lobster13Regular', Arial, sans-serif;
+        font: 60px/70px 'Qwigley', 'Lobster13Regular', Arial, sans-serif;
         letter-spacing: 0;
         padding-left: 2.475%;
       }
