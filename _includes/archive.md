@@ -1,8 +1,8 @@
 {% for post in posts_collate  %}
   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+  {% capture this_month %}{{ post.date | date: "%b" }}{% endcapture %}
   {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-  {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+  {% capture next_month %}{{ post.previous.date | date: "%b" }}{% endcapture %}
  
   {% if forloop.first %}
     <div class="post">

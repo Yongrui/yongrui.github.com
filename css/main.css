@@ -358,6 +358,11 @@ pre code {
     padding-left: 0;
   }
 
+  .site .post .next-month .meta {
+    font-size: 20px;
+    margin-top: -18px;
+}
+
   .pagination {
     margin-left: 0;
   }
