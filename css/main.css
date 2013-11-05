@@ -342,6 +342,30 @@ pre code {
 /*
 /*****************************************************************************/
 
+@media (max-width: 1700px) {
+    .site .post .next-month .meta {
+      font-size: 30px;
+  }
+}
+
+@media (max-width: 1500px) {
+    .site .post .next-month .meta {
+      font-size: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+    .site .post .next-month .meta {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+    .site .post .next-month .meta {
+      font-size: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .site .sidebar {
     display: none;
