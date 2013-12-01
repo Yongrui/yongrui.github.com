@@ -1,4 +1,4 @@
-name: Codemyown
+name: Codemyown! Yongrui's blog.
 pygments: true
 permalink: /blog/:year/:month/:day/:title
 paginate: 10
