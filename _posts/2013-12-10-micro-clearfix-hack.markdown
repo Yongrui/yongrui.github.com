@@ -2,7 +2,7 @@
 layout: post
 title: "Micro clearfix hack"
 category: css
-tags: [css, clearfix]
+tags: ["css", "clearfix"]
 comments: true
 description: ""
 ---
